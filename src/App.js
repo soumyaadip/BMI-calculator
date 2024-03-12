@@ -43,6 +43,7 @@ function App() {
  //reload logic
 
  let reload =()=>{
+  console.log("relod")
   window.location.reload();
  }
 
@@ -61,18 +62,18 @@ function App() {
 
         <form onSubmit={calbmi}>
               <div className='weight'>
-                  <lebel>Weight(kg)</lebel>
-                  <input type="text" placeholder="Enter your weight" value={weight}
+                  <label>Weight(kg)</label>
+                  <input required type="text" placeholder="Enter your weight" value={weight}
                   onChange={(a)=>setWeight(a.target.value)}/>
               </div>
               <div className='height'>
-                <lebel>Height(cm)</lebel>
-                <input type="text" placeholder="Enter your Height" value={height}
+                <label>Height(cm)</label>
+                <input required type="text" placeholder="Enter your Height" value={height}
                 onChange={(event)=>setHeight(event.target.value)}/>
               </div>
               <div >
                 <button className="btn" type="submit">Submit</button>
-                <button className="btn btn-outline" onclick={reload} type="submit">Reload</button>
+                <button className="btn btn-outline" onClick={reload} type="submit">Reload</button>
               </div>
 
               <div className="messeges">
